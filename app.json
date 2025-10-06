@@ -1,0 +1,72 @@
+{
+  "expo": {
+    "name": "Just Kıbrıs",
+    "slug": "just-kibris",
+    "version": "1.0.6",
+    "orientation": "portrait",
+    "icon": "./src/assets/AppLogo/storeLogo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/AppLogo/appLogoLigth.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "jsEngine": "jsc",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.softrestart.justkibris",
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSExceptionDomains": {
+            "mb.gov.ct.tr": {
+              "NSIncludesSubdomains": true,
+              "NSTemporaryExceptionAllowsInsecureHTTPLoads": true,
+              "NSTemporaryExceptionMinimumTLSVersion": "TLSv1.0"
+            }
+          }
+        },
+        "NSPhotoLibraryUsageDescription": "Just Kıbrıs Uygulaması ilan fotoğrafları paylaşmak için fotoğraflara erişme izni gerekmektedir.",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "buildNumber": "8"
+    },
+    "android": {
+      "permissions": ["INTERNET"],
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/AppLogo/storeLogo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.softrestart.justkibris",
+      "versionCode": 10
+    },
+    "web": {
+      "favicon": "./src/assets/favicon.png"
+    },
+    "extra": {
+      "apiBaseUrl": "https://us-central1-justkibris-3eb20.cloudfunctions.net",
+      "eas": {
+        "projectId": "5d899716-1f17-40a3-ab42-d9fc81086471"
+      }
+    },
+    "owner": "botanozt",
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static",
+            "hermesEnabled": false
+          }
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Just Kıbrıs uygulaması, ilan fotoğraflarını paylaşabilmek için fotoğraf galerisine erişim izni istemektedir."
+        }
+      ]
+    ]
+  }
+}
